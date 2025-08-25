@@ -8,29 +8,24 @@ const WalletPage = lazy(() => import("./pages/WalletPage"));
 const WalletDetailPage = lazy(() => import("./pages/WalletDetailPage"));
 
 function App() {
-  const router = createHashRouter(
-    [
-      {
-        path: "/",
-        element: <HomePage />,
-      },
-      {
-        path: "/wallet/",
-        element: <WalletPage />,
-      },
-      {
-        path: "/wallet/:id",
-        element: <WalletDetailPage />,
-      },
-      {
-        path: "*",
-        element: <Navigate to="/" replace />,
-      },
-    ],
+  const router = createHashRouter([
     {
-      basename: "/",
-    }
-  );
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      path: "/wallet",
+      element: <WalletPage />,
+    },
+    {
+      path: "/wallet/:id",
+      element: <WalletDetailPage />,
+    },
+    {
+      path: "*",
+      element: <Navigate to="/" replace />,
+    },
+  ]);
 
   return (
     <ThemeProvider storageKey="theme">
