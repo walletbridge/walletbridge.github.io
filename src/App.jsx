@@ -29,7 +29,7 @@ function App() {
 
   return (
     <ThemeProvider storageKey="theme">
-      <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
+      <Suspense fallback={<div className="loading-spinner">Loading..</div>}>
         <RouterProvider router={router} />
       </Suspense>
     </ThemeProvider>
